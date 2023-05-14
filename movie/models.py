@@ -10,8 +10,8 @@ class Movie(models.Model):
     country = models.CharField(max_length=50)
     duration = models.IntegerField()
     price = models.FloatField()
-    created_at = models.DateTimeField(auto_now=True)
-    update_at = models.DateTimeField(null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         db_table = "movies"

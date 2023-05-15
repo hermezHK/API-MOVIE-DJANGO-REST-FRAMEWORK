@@ -88,7 +88,14 @@ WSGI_APPLICATION = 'movies.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-  'default': env.db('MYSQL_URL'),
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env.db('MYSQLDATABASE'),
+        'PORT': env.db('MYSQLPORT'),
+        'USER': env.db('MYSQLUSER'),
+        'PASSWORD': env.db('MYSQLPASSWORD'),
+        'HOST': env.db('MYSQLHOST'),
+    }
 }
 
 

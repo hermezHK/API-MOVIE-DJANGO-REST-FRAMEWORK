@@ -20,7 +20,6 @@ env = environ.Env(DEBUG=(bool, False))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -88,14 +87,7 @@ WSGI_APPLICATION = 'movies.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': env.db('MYSQLDATABASE'),
-        'PORT': env.db('MYSQLPORT'),
-        'USER': env.db('MYSQLUSER'),
-        'PASSWORD': env.db('MYSQLPASSWORD'),
-        'HOST': env.db('MYSQLHOST'),
-    }
+  'default': env.db('MYSQL_URL'),
 }
 
 

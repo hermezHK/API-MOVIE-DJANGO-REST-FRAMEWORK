@@ -24,12 +24,3 @@ web: python manage.py migrate && gunicorn movies.wsgi
 using Mysql
 [railway.app](https://railway.app/)
 
-## 5. Config enviroments
-
-```python
-MYSQLDATABASE=
-MYSQLUSER=
-MYSQLPASSWORD=
-MYSQLHOST=
-MYSQLPORT=
-```

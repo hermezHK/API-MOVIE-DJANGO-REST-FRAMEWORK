@@ -31,7 +31,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 ## 2. Create requirements
 
 ```bash
-pip install > requirements.txt
+pip freeze > requirements.txt
 ```
 
 ## 3. Config whitenoise
